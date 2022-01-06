@@ -13,5 +13,109 @@
     --DarkBlue-color: #1e2329;  /* Dark Blue  */
     --nav-color: #eaeaea;       /* nav White  */
     --shadow-color: #4e4d5e;    /* shadow     */
+    --shadow2-color: #5c5c5c;   /* shadow2    */
     --BR-color: #efeef4;        /* BR White   */
+    --text-color : #cccccc;        /* text       */
+}
+
+header {
+    background-color: var(--nav-color);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    box-shadow: 0 4px 14px -4px var(--shadow2-color)
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--FlatBlue-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: var(--FlatBlue-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+    transition: 0.7s ease;
+}
+
+.navigation a:hover {
+    color: var(--DarkBlue-color);
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/ME.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-color: var(--FlatBlue-color);
+    background-position: right bottom;
+}
+
+.main h2 {
+    color: var(--DarkBlue-color);
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--nav-color);
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.main h3 {
+    color: var(--DarkBlue-color);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 10px 0 30px ;
+}
+
+.main-btn {
+    color: var(--nav-color);
+    background-color: #2a3646;
+    /* box-shadow: 2px 4px 8px 0px var(--shadow-color); */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    transition: 0.8s ease;
+}
+
+.main-btn:hover {
+    box-shadow: 2px 4px 8px 0px var(--shadow-color);
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: var(--DarkBlue-color);
+    font-size: 1.7em;
+    padding-right: 30px;
+    transition: 0.8s ease;
+}
+
+.social-icons a:hover {
+    color: var(--nav-color);
 }
