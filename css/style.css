@@ -9,13 +9,14 @@
 }
 
 :root {
-    --FlatBlue-color: #517191;  /* Flat Blue  */
-    --DarkBlue-color: #1e2329;  /* Dark Blue  */
-    --nav-color: #eaeaea;       /* nav White  */
-    --shadow-color: #4e4d5e;    /* shadow     */
-    --shadow2-color: #5c5c5c;   /* shadow2    */
-    --BR-color: #efeef4;        /* BR White   */
-    --text-color : #cccccc;        /* text       */
+    --FlatBlue-color: #517191;            /* Flat Blue */
+    --DarkBlue-color: #1e2329;            /* Dark Blue */
+    --nav-color: #eaeaea;                 /* nav White */
+    --shadow-color: #4e4d5e;              /* shadow    */
+    --shadow2-color: #5c5c5c;             /* shadow2   */
+    --shadow3-color : rgba(1 1 1 / 30%);  /* shadow    */
+    --BR-color: #efeef4;                  /* BR White  */
+    --text-color : #cccccc;               /* text      */
 }
 
 header {
@@ -32,14 +33,19 @@ header {
 
 .logo {
     text-decoration: none;
-    color: var(--FlatBlue-color);
+    color: var(--DarkBlue-color);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
+    transition: 0.7s ease;
+}
+
+.logo:hover {
+    color: var(--FlatBlue-color);
 }
 
 .navigation a {
-    color: var(--FlatBlue-color);
+    color: var(--DarkBlue-color);
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
@@ -48,7 +54,7 @@ header {
 }
 
 .navigation a:hover {
-    color: var(--DarkBlue-color);
+    color: var(--FlatBlue-color);
 }
 
 section {
@@ -118,4 +124,74 @@ section {
 
 .social-icons a:hover {
     color: var(--nav-color);
+}
+
+#services {
+    background-color: var(--nav-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .centralizing {
+    background-color: rgb(43, 198, 226);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--FlatBlue-color);
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--BR-color);
+    width: 21.25em;
+    box-shadow: 0 5px 25px var(--shadow3-color);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.icon i img {    
+    width: 7em;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: var(--FlatBlue-color);
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.inside {
+    list-style-position: inside;
+    list-style-type: "- ";
 }
