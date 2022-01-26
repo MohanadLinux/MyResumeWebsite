@@ -33,28 +33,28 @@ header {
 
 .logo {
     text-decoration: none;
-    color: var(--DarkBlue-color);
+    color: var(--FlatBlue-color);
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
-    transition: 0.7s ease;
+    transition: 0.5s ease;
 }
 
-.logo:hover {
-    color: var(--FlatBlue-color);
-}
+/* .logo:hover {
+    color: #000;
+} */
 
 .navigation a {
-    color: var(--DarkBlue-color);
+    color: var(--FlatBlue-color);
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 500;
     padding-left: 30px;
-    transition: 0.7s ease;
+    transition: 0.5s ease;
 }
 
-.navigation a:hover {
-    color: var(--FlatBlue-color);
+.logo:hover, .navigation a:hover {
+    color: #000;
 }
 
 section {
@@ -164,7 +164,7 @@ section {
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
-    transition: 0.7s ease;
+    transition: 0.5s ease;
 }
 
 .card:hover {
@@ -194,4 +194,74 @@ section {
 .inside {
     list-style-position: inside;
     list-style-type: "- ";
+}
+
+.projects {
+    background-color: var(--FlatBlue-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#projects-title {
+    color: var(--nav-color);
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: var(--BR-color);
+    border: 1px solid var(--BR-color);
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.5s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.project-image img {
+    width: 100%;
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.9em;
+    color: var(--DarkBlue-color);
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    color: var(--DarkBlue-color);
+    font-weight: 800;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.see-project {
+    /* text-decoration: none; */
+    color: var(--FlatBlue-color);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.see-project:hover {
+    color: var(--DarkBlue-color);
+    text-decoration: none;
 }
