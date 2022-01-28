@@ -17,6 +17,7 @@
     --shadow3-color : rgba(1 1 1 / 30%);  /* shadow    */
     --BR-color: #efeef4;                  /* BR White  */
     --text-color : #cccccc;               /* text      */
+    --footer-color :#455c73;
 }
 
 /* ########## 1- Nav section ########## */
@@ -345,7 +346,7 @@ section {
 #pdf a img {
     background-color: var(--BR-color);
     padding: 20px;
-    box-shadow: 0 10px 20px var(--DarkBlue-color);
+    box-shadow: 0 5px 15px var(--DarkBlue-color);
     border-radius: 20px;
     width: 7em;
     transition: 0.5s ease;
@@ -354,3 +355,26 @@ section {
 #pdf a img:hover {
     transform: scale(1.1) rotate(5deg);
 }
+
+/* ########## 6- Footer ########## */
+footer {
+    background-color: var(--footer-color);
+    /* min-height: 40vh; */
+    color: var(--BR-color);
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    font-size: 0.7em;
+    padding: 25px 100px;
+}
+
+
+.footer-div a {
+    text-decoration: none;
+    color: var(--BR-color);
+}
+
+.footer-div a:hover {
+    text-decoration: underline;
+}
+
