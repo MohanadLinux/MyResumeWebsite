@@ -5,7 +5,8 @@ const navbar = document.getElementById('navbar');
 const ulnavbar = document.getElementById('ulnavbar');
 
 document.onclick = function(e){
-    if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'  && e.target.id !== 'ulnavbar'){
+    if(e.target.id !== 'header' && e.target.id !== 'toggle' 
+    && e.target.id !== 'navbar'  && e.target.id !== 'ulnavbar'){
         toggle.classList.remove('active');
         navbar.classList.remove('active');
         ulnavbar.classList.remove('active');
