@@ -457,9 +457,9 @@ footer {
 
     #toggle {
         position: absolute;
-        right: 3em;
-        width: 40px;
-        height: 40px;
+        right: 1.2em;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
         align-items: center;
         display: flex;
@@ -473,9 +473,9 @@ footer {
         position: absolute;
         width: 28px;
         height: 2px;
-        background-color: var(--DarkBlue-color);
+        background-color: var(--FlatBlue-color);
         transform: translateY(-5px);
-        transition: 0.2s ease;
+        transition: 0.4s ease;
         align-items: center;
     }
     
@@ -484,9 +484,9 @@ footer {
         position: absolute;
         width: 28px;
         height: 2px;
-        background-color: var(--DarkBlue-color);
+        background-color: var(--FlatBlue-color);
         transform: translateY(5px);
-        transition: 0.2s ease;
+        transition: 0.4s ease;
     }
     
     #toggle.active {
@@ -496,10 +496,12 @@ footer {
     
     #toggle.active::before {
         transform: translateY(0px) rotate(45deg);
+        background-color: var(--DarkBlue-color);
     }
     
     #toggle.active::after {
-        transform: translateY(0px) rotate(-45deg);
+        transform: translateY(0px) rotate(-225deg);
+        background-color: var(--DarkBlue-color);
     }
     
     #navbar {
@@ -688,6 +690,10 @@ footer {
     .project-title {
         font-size: 0.8em;
     }
+    footer {
+        padding: 25px 10px;
+    }
+
 }
 
 @media (max-width: 375px) {
@@ -712,12 +718,12 @@ footer {
         background-size: 70%;
     }
 
-    .logo {
-        padding-left: 30px;
-        font-size: 1.1em;
-    }
-
     .title {
         font-size: 1em;
     }
+
+    footer {
+        padding: 25px 10px;
+    }
+
 }
