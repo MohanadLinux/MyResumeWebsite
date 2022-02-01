@@ -25,13 +25,15 @@
 header {
     background-color: var(--nav-color);
     width: 100%;
+    top: 0;    /*  remove */
+    right: 0;  /*  remove */
     position: fixed;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 150px;
-    box-shadow: 0 4px 14px -4px var(--shadow2-color)
+    padding: 10px 10%;
+    box-shadow: 0 4px 14px -4px var(--shadow2-color);
 }
 
 .logo {
@@ -44,40 +46,34 @@ header {
     font-family: 'Montserrat'
 }
 
-.navigation a {
+#navbar ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+#navbar ul li a {
     color: var(--FlatBlue-color);
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 500;
-    /* margin-left: 30px; */
     padding: 10px;
-    border-radius: 100px;
+    display: inline-block;
+}
+
+.logo:hover {
+    color: #000;
     transition: 0.5s ease;
 }
 
-.logo:hover, .navigation a:hover {
+#navbar a:hover {
     color: #000;
-}
-
-
-.hamburger-menu {
-    position: absolute;
-    /* top: 0.75em; */
-    align-items: center;
-    right: 1.5em;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-}
-
-.hamburger-menu .bar {
-    height: 3px;
-    width: 100%;
-    background-color: var(--FlatBlue-color);
-    border-radius: 10px;
-    align-items: center;
+    text-decoration: underline;
+    transition: 0.5s ease;
 }
 
 /* ########## 2- Main section ########## */
@@ -458,30 +454,79 @@ footer {
 }
 
 @media (max-width: 940px) {
-    .hamburger-menu {
+
+    #toggle {
+        position: absolute;
+        right: 3em;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        align-items: center;
         display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 998;
+    }
+    
+    #toggle::before {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: var(--DarkBlue-color);
+        transform: translateY(-5px);
+        transition: 0.2s ease;
+        align-items: center;
+    }
+    
+    #toggle::after {
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        background-color: var(--DarkBlue-color);
+        transform: translateY(5px);
+        transition: 0.2s ease;
+    }
+    
+    #toggle.active {
+        background-color: #dbdbdb;
+        border-radius: 3px;
+    }
+    
+    #toggle.active::before {
+        transform: translateY(0px) rotate(45deg);
+    }
+    
+    #toggle.active::after {
+        transform: translateY(0px) rotate(-45deg);
+    }
+    
+    #navbar {
+        background-color: var(--nav-color);
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        transition: 0.5s ease;
+        width: 0px;
+        overflow: hidden;
+        box-shadow: 0 10px 14px -4px var(--shadow2-color);
+        border-radius: 170% 0 0 1270%;
     }
 
-    .navigation {
-        display: none;
-        width: 100%;
-        text-align: center;
-        padding: 0.5em 1em;
+    #navbar.active{
+        width: 40%;
+    }
+    #navbar ul {
         flex-direction: column;
-    }
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 10px;
+        align-items: center;
+        margin: 50px 20px 150px;
+
     }
 
-    .navigation a{
-        width: 100%;
-        /* flex-direction: column; */
-    }
-
-    .navigation.active {
-        display: flex;
+    #navbar ul li {
+        margin: 10px;
+        align-items: left;
     }
 
     section {
