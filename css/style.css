@@ -218,6 +218,9 @@ section {
     list-style-position: inside;
     list-style-type: "- ";
 }
+#inside-web li {
+    font-size: 0.7em;
+}
 
 /* ########## 4- Projects section ########## */
 .projects {
@@ -278,8 +281,7 @@ section {
 }
 
 .see-project {
-    /* text-decoration: none; */
-    color: var(--FlatBlue-color);
+    color: var(--DarkBlue-color);
     font-weight: 400;
     font-size: 0.8em;
 }
@@ -313,7 +315,7 @@ section {
 #summary {
     background-color: var(--BR-color);
     padding: 40px;
-    color: var(--FlatBlue-color);
+    color: #000;
     border-radius: 10px 0 0 10px;
     margin: auto;
 }
@@ -328,16 +330,11 @@ section {
     text-align: center;
     font-size: 1.2em;
     font-weight: 800;
-    color: var(--DarkBlue-color);
 }
 
 .col-header {
-    color: var(--DarkBlue-color);
-    font-weight: 600;
-}
-
-.row-header {
-    color: var(--DarkBlue-color);
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
 #pdf {
@@ -351,10 +348,10 @@ section {
 
 #pdf p {
     margin-bottom: 50px;
-    color: var(--nav-color);
+    color: #fff;
     font-size: 1.3em;
     font-weight: 500;
-    letter-spacing: 1.1px;
+    /* letter-spacing: 1.1px; */
 }
 
 #pdf p span{
@@ -455,7 +452,7 @@ footer {
 
 @media (max-width: 940px) {
 
-    #toggle {
+    #toggle{
         position: absolute;
         right: 1.2em;
         width: 30px;
@@ -467,14 +464,39 @@ footer {
         align-items: center;
         z-index: 998;
     }
-    
+    #toggle2 {
+        position: absolute;
+        right: 1.2em;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 997;
+    }
+
     #toggle::before {
         content: '';
         position: absolute;
-        width: 28px;
+        width: 25px;
         height: 2px;
+        border-radius: 10px;
         background-color: var(--FlatBlue-color);
-        transform: translateY(-5px);
+        transform: translateY(-7px);
+        transition: 0.5s ease;
+        align-items: center;
+    }
+
+    #toggle2::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        border-radius: 10px;
+        background-color: var(--FlatBlue-color);
+        transform: translateY(0px);
         transition: 0.4s ease;
         align-items: center;
     }
@@ -482,25 +504,26 @@ footer {
     #toggle::after {
         content: '';
         position: absolute;
-        width: 28px;
+        width: 25px;
         height: 2px;
+        border-radius: 10px;
         background-color: var(--FlatBlue-color);
-        transform: translateY(5px);
+        transform: translateY(7px);
         transition: 0.4s ease;
     }
     
-    #toggle.active {
+    #toggle.active, #toggle2.active {
         background-color: #dbdbdb;
-        border-radius: 3px;
+        border-radius: 7px;
     }
     
-    #toggle.active::before {
+    #toggle.active::before, #toggle2.active::before {
         transform: translateY(0px) rotate(45deg);
         background-color: var(--DarkBlue-color);
     }
     
     #toggle.active::after {
-        transform: translateY(0px) rotate(-225deg);
+        transform: translateY(0px) rotate(-405deg);
         background-color: var(--DarkBlue-color);
     }
     
@@ -512,8 +535,8 @@ footer {
         transition: 0.5s ease;
         width: 0px;
         overflow: hidden;
-        box-shadow: 0 10px 14px -4px var(--shadow2-color);
-        border-radius: 170% 0 0 1270%;
+        box-shadow: 0px 14px 14px -7px var(--shadow2-color);
+        border-radius: 1520% 0 0 6170%;
     }
 
     #navbar.active{
@@ -522,13 +545,15 @@ footer {
     #navbar ul {
         flex-direction: column;
         align-items: center;
-        margin: 50px 20px 150px;
-
+        margin: 40px 0 90px 10px;
     }
 
     #navbar ul li {
-        margin: 10px;
-        align-items: left;
+        margin: 2px;
+    }
+
+    #navbar ul li a {
+        font-size: 0.8em;
     }
 
     section {
@@ -633,6 +658,12 @@ footer {
 }
 
 @media (max-width: 460px) {
+
+    header {
+
+        padding: 10px 2%;
+    }
+
     section {
         padding: 15px 40px;
     }
