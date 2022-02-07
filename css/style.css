@@ -367,7 +367,7 @@ section {
     background-color: var(--BR-color);
     padding: 20px;
     box-shadow: 0 5px 15px var(--DarkBlue-color);
-    border-radius: 20px;
+    border-radius: 10px;
     width: 7em;
     transition: 0.5s ease;
 }
