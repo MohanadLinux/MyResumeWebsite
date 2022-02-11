@@ -369,7 +369,7 @@ section {
     background-color: var(--BR-color);
     padding: 20px;
     box-shadow: 0 5px 15px var(--DarkBlue-color);
-    border-radius: 2px 2px 10px 2px;
+    border-radius: 6px;
     width: 7em;
     transition: 0.5s ease;
 }
